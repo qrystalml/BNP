@@ -1,0 +1,6 @@
+# Input dataset
+enron-event-history-all.csv
+
+# cache files
+__pycache__/
+
