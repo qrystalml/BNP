@@ -20,12 +20,12 @@ In order to make this repository accessible for it's audience with different lev
    Please make sure the input data file `enron-event-history-all.csv` has been placed in the same directory of summarize-enron.py script
    
 ## Install the project's development and runtime requirements:
-
-    `pip install -r requirements.txt`
+   Please note that this step is not required i you are working a conda environment.
+    pip install -r requirements.txt
 
 ## To get summarization results, please run the following command
 
-    `python summarize-enron.py enron-event-history-all.csv`
+    python summarize-enron.py enron-event-history-all.csv
   
 ## Results
    All the result files generated with summary data will be placed in the `results` folder.
