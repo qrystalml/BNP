@@ -4,7 +4,7 @@
 This module holds the wrapper function `main` to parse and process command line request.
 """
 # Module imports
-import sys
+import sys, os
 import argparse
 import logging
 
@@ -65,6 +65,10 @@ def main(args=None):
         # Create EnronEventHistory object
         input_data_loc = parameters.enron_data_file
         eeh = EnronEventHistory(input_data_loc)
+		
+		# Create results folder if doesn't exist already
+		if not os.path.exists(Config.RESULTS_PATH):
+			os.makedirs(Config.RESULTS_PATH)
         
         # Generate the number of emails sent and received by each person
         # This corresponds to the task 1 of the technical exam
@@ -72,19 +76,19 @@ def main(args=None):
         
         # Generate sent email count distribution on monthly basis
         # This corresponds to the task 2 of the technical exam
-        senders_list = email_count_stats_df['person'][:Config.TASK_2_NUM_SENDERS].tolist()
+        person_list = email_count_stats_df['person'][:Config.TASK_2_NUM_SENDERS].tolist()
         
         # Remove email names that doesn't represent real persons
-        senders_list = [x for x in senders_list if x not in Config.TASK_2_EXCLUDE_SENDERS]
+        person_list = [x for x in person_list if x not in Config.TASK_2_EXCLUDE_SENDERS]
         
         # Generate sent email count plot
-        eeh_monthly_sent_count_df, sent_email_count_dist_plot_file = eeh.generate_sent_email_count_distribution(senders_list)
+        eeh_monthly_sent_count_df, sent_email_count_dist_plot_file = eeh.generate_sent_email_count_distribution(person_list)
         
         # Generate relative unique contact count plot for the same persons
-        eeh_monthly_unq_contacts_df, rel_unq_contacts_count_dist_plot_file = eeh.generate_relative_unique_contacts_distribution(senders_list)
+        eeh_monthly_unq_contacts_df, rel_unq_contacts_count_dist_plot_file = eeh.generate_relative_unique_contacts_distribution(person_list)
         
     except Exception as e:
-        logging.error("Generation Enron data summary failed. Error details are: ")
+        logging.error("Generation of Enron data summary tasks failed. Error details are: ")
         logging.error("Error {0}".format(str(e).encode("utf-8")))
         
         raise e

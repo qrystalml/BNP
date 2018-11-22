@@ -41,4 +41,17 @@ In order to make this repository accessible for it's audience with different lev
 * Number of unique contacts over time for the top 10 prolific users are saved as
     
     `recipient_monthly_unique_contact_count_relative_dist_plot_timestamp.png`
+	
+## Resolving known errors
+	If you run into the  error on unix machine, run following commands as workaround to overcome
+	`sudo apt update`
+	`sudo apt install libgl1-mesa-glx`
+	
+## Assumptions, Adoptions & Extensions
+   While developing the tasks for the technical test, following assumptions have been made and configurations are provided wherever possible
+   * It has been assumed that each sender and recipient names/email addresses are unique and clean. There is no preprocessing done on them.
+   * In order to produce visualizations of data over time, I have used month as unit and data has been aggregated for each month before plotting them
+   * All the plots have been provided as line charts
+   * For simplicity and clarity, I have taken top 5 prolific senders for generating visualizations. This can be configured simply by changing the config value.
+   * An exclusion list has been added to the list of senders to make sure enterprise ids like 'notes', 'announcements' etc will not be considered for visualizations.
     
