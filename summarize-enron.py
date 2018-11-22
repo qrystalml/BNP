@@ -65,10 +65,10 @@ def main(args=None):
         # Create EnronEventHistory object
         input_data_loc = parameters.enron_data_file
         eeh = EnronEventHistory(input_data_loc)
-		
-		# Create results folder if doesn't exist already
-		if not os.path.exists(Config.RESULTS_PATH):
-			os.makedirs(Config.RESULTS_PATH)
+        
+        # Create results folder if doesn't exist already
+        if not os.path.exists(Config.RESULTS_PATH):
+            os.makedirs(Config.RESULTS_PATH)
         
         # Generate the number of emails sent and received by each person
         # This corresponds to the task 1 of the technical exam
