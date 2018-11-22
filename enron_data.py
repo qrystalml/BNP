@@ -10,11 +10,12 @@ import time
 import logging
 import pandas as pd
 import numpy as np
+import matplotlib
+matplotlib.use('agg')
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 import seaborn as sns
 from config_data import Config
-%matplotlib inline
 
 class EnronEventHistory():
     def __init__(self, input_data_path):
