@@ -23,3 +23,9 @@ class Config(object):
     # Results configuration
     RESULTS_PATH = './results/'
     
+    # Task specific configuration
+    # Task 1 configuration
+    
+    # Task 2 configuration
+    TASK_2_NUM_SENDERS = 5
+    TASK_2_EXCLUDE_SENDERS = ['notes', 'announcements', 'blank']

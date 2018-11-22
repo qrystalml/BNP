@@ -21,11 +21,11 @@ In order to make this repository accessible for it's audience with different lev
    
 ## Install the project's development and runtime requirements:
 
-    pip install -r requirements.txt
+    `pip install -r requirements.txt`
 
 ## To get summarization results, please run the following command
 
-    python summarize-enron.py enron-event-history-all.csv
+    `python summarize-enron.py enron-event-history-all.csv`
   
 ## Results
    All the result files generated with summary data will be placed in the `results` folder.
@@ -36,9 +36,9 @@ In order to make this repository accessible for it's audience with different lev
 
 * Number of emails sent over time by top 10 prolific users are saved as
     
-    `sent_email_count_distribution_stats_timestamp.png`
+    `senders_monthly_email_count_dist_plot_timestamp.png`
 
 * Number of unique contacts over time for the top 10 prolific users are saved as
     
-    `unique_received_contact_distribution_stats_timestamp.png`
+    `recipient_monthly_unique_contact_count_relative_dist_plot_timestamp.png`
     
