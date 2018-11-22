@@ -1,4 +1,4 @@
-# This repository contains source code for PNB Paribas technical test.
+# This repository contains source code for BNP Paribas technical test.
 
 In order to make this repository accessible for it's audience with different levels of technical expertise, it has been structured in its simplistic form with clear instructions on how to setup and execute functions in various module to achieve desired outcome at various steps.
 
@@ -44,8 +44,8 @@ In order to make this repository accessible for it's audience with different lev
 	
 ## Resolving known errors
 	If you run into the  error on unix machine, run following commands as workaround to overcome
-	`sudo apt update`
-	`sudo apt install libgl1-mesa-glx`
+	'sudo apt update'
+	'sudo apt install libgl1-mesa-glx'
 	
 ## Assumptions, Adoptions & Extensions
    While developing the tasks for the technical test, following assumptions have been made and configurations are provided wherever possible
