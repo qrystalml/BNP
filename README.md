@@ -20,7 +20,7 @@ In order to make this repository accessible for it's audience with different lev
    Please make sure the input data file `enron-event-history-all.csv` has been placed in the same directory of summarize-enron.py script
    
 ## Install the project's development and runtime requirements
-   Please note that this step is not required i you are working a conda environment.
+   Please note that this step is not required if you are working in a conda environment.
    
     pip install -r requirements.txt
 
