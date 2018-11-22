@@ -21,11 +21,11 @@ In order to make this repository accessible for it's audience with different lev
    
 ## Install the project's development and runtime requirements:
 
-    `pip install -r requirements.txt`
+    pip install -r requirements.txt
 
 ## To get summarization results, please run the following command
 
-    `python summarize-enron.py enron-event-history-all.csv`
+    python summarize-enron.py enron-event-history-all.csv
   
 ## Results
    All the result files generated with summary data will be placed in the `results` folder.
